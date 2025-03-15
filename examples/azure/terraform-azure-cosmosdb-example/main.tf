@@ -71,7 +71,7 @@ resource "azurerm_cosmosdb_sql_database" "testdb" {
 resource "azurerm_cosmosdb_sql_container" "container1" {
   name                = "test-container-1"
   throughput          = var.throughput
-  partition_key_paths  = "/key1"
+  partition_key_path  = "/key1"
   resource_group_name = azurerm_cosmosdb_account.test.resource_group_name
   account_name        = azurerm_cosmosdb_account.test.name
   database_name       = azurerm_cosmosdb_sql_database.testdb.name
@@ -79,7 +79,7 @@ resource "azurerm_cosmosdb_sql_container" "container1" {
 
 resource "azurerm_cosmosdb_sql_container" "container2" {
   name                = "test-container-2"
-  partition_key_paths  = "/key2"
+  partition_key_path  = "/key2"
   resource_group_name = azurerm_cosmosdb_account.test.resource_group_name
   account_name        = azurerm_cosmosdb_account.test.name
   database_name       = azurerm_cosmosdb_sql_database.testdb.name
@@ -87,7 +87,7 @@ resource "azurerm_cosmosdb_sql_container" "container2" {
 
 resource "azurerm_cosmosdb_sql_container" "container3" {
   name                = "test-container-3"
-  partition_key_paths  = "/key3"
+  partition_key_path  = "/key3"
   resource_group_name = azurerm_cosmosdb_account.test.resource_group_name
   account_name        = azurerm_cosmosdb_account.test.name
   database_name       = azurerm_cosmosdb_sql_database.testdb.name
